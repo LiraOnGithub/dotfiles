@@ -1,0 +1,66 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 25,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-top": 0,
+    "margin-bottom": 0, 
+    "fixed-center": true,
+    "modules-left": ["sway/window"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["sway/mode", "network", "wireplumber", "backlight", "battery", "clock"],
+
+    "sway/window": {
+        "max-length": 200,
+        "rewrite": {
+            "(.*) .+ Mozilla Firefox": "$1",
+        }
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "disable-click": false,
+	"persistent-workspaces": {
+		"1:Internet": [],
+		"2": [],
+	},
+	"format": "{name}"
+    },
+
+    "sway/mode": {
+        "format": "{}"
+    },
+    "clock": {
+        "format": "{:%a %d %B %R}"
+    },
+    "battery": {
+        "bat": "BAT0",
+        "full-at": 95,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-icons": ["  ", "  ", "  ", "  ", "  "]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-disconnected": "⚠ Disconnected"
+    },
+    "wireplumber": {
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "default": ["", ""]
+        },
+	"on-click": "helvum"
+    },
+    "backlight": {
+         "device": "amdgpu_bl1",
+         "format": "{percent}% {icon}",
+         "format-icons": [""]
+    }
+}

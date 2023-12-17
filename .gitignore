@@ -1,0 +1,16 @@
+*
+!.gitignore
+!alacritty
+!alacritty/alacritty.yml
+!swaylock
+!swaylock/config
+!waybar
+!waybar/config
+!waybar/*.css
+!sway
+!sway/config
+!sway/sway.d
+!sway/sway.d/*
+!wofi
+!wofi/config
+!wofi/*.css

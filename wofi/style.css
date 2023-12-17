@@ -1,0 +1,56 @@
+/* https://man.archlinux.org/man/wofi.7.en#WIDGET_LAYOUT */
+/* https://docs.gtk.org/gtk3/css-properties.html */
+window {
+	color: white;
+	background:rgba(30,30,30,.9); /*#444*/
+	border:2px solid #444;
+	font-family: "Ubuntu Nerd Font Cond", "Twemoji Mozilla";
+}
+#input {
+	margin-bottom:20px;
+	color: white;
+	background:#222;
+	border:1px solid #444;
+	padding:2px 10px;
+}
+#text{
+	margin-left:10px;
+}
+#outer-box{
+	margin:5px;
+}
+#entry:selected{
+	background:#444;
+	outline:0;
+}
+expander {
+	background-image:url("~/Backgrounds/desktop-background.jpg");
+	background-image:url("~/Downloads/arrow-test.png");
+}
+expander list {
+	color:inherit;
+	background:transparent;
+	padding-left:30px;
+}
+expander title arrow + * * + * + label {
+	padding-left:32px;
+	background:green;
+	border-radius:50%;
+	background-image:url("~/Downloads/arrow-test.png");
+	background-image:url("~/Backgrounds/desktop-background.jpg");
+}
+expander title arrow:checked + * * + * + label {
+	background:red;
+}
+
+/*Remove arrow*/
+/*https://lazka.github.io/pgi-docs/Gtk-3.0/classes/Expander.html*/
+expander title arrow{
+	-gtk-icon-transform:scaleX(0);
+	margin:-100px;
+}
+/*Remove search icon*/
+#input image:first-child {
+	-gtk-icon-transform:scaleX(0);
+	margin:-100px;
+}

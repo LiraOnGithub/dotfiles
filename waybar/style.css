@@ -1,0 +1,60 @@
+* {
+	/* Find font-name with fc-scan */
+	font-family: "Ubuntu Nerd Font Cond", "Twemoji Mozilla";
+	font-size: 14px;
+	min-height: 0;
+}
+
+window#waybar {
+	background: #222;
+	color: white;
+}
+
+#window{
+	padding: 5px;
+}
+
+#workspaces button {
+	color:white;
+	border-radius:0;
+	background:inherit;
+	border-color:transparent;
+}
+#workspaces button.focused {
+	background:black;
+}
+
+#clock,
+#tray,
+#temperature,
+#battery,
+#cpu,
+#memory,
+#network,
+#wireplumber,
+#backlight,
+#mode{
+	padding:2px 5px;
+	background:#444;
+	border-radius:4px;
+	margin-right:2px;
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+#mode{
+	background:#FD0;
+	color:black;
+}
+
+#battery.charging {
+}
+
+#battery.critical {
+	background:#FA0;
+	color:black;
+}
+
+#network.disconnected {
+	color: #b62d66;
+}
